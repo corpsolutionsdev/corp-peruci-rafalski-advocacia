@@ -1,0 +1,29 @@
+{
+    "name": "Peruci & Rafalski Advocacia",
+    "short_name": "Peruci & Rafalski",
+    "description": "Especialistas em direitos trabalhistas e previdenciários em Canoinhas-SC",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#f77428",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "pt-BR",
+    "categories": ["business", "legal"],
+    "icons": [
+        {
+            "src": "/src/img/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/src/img/logo.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        }
+    ]
+}

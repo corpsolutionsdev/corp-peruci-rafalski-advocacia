@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://perucierafalski.adv.br/sitemap.xml
+
+# Crawl-delay para ser respeitoso com o servidor
+Crawl-delay: 1
+
+# Permitir acesso a recursos importantes
+Allow: /src/css/
+Allow: /src/js/
+Allow: /src/img/
+
+# Bloquear acesso a arquivos desnecessários
+Disallow: /src/css/*.map
+Disallow: /src/js/*.map
