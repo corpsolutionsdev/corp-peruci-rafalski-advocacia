@@ -11,7 +11,26 @@ Crawl-delay: 1
 Allow: /src/css/
 Allow: /src/js/
 Allow: /src/img/
+Allow: /src/img/team/
 
 # Bloquear acesso a arquivos desnecessários
 Disallow: /src/css/*.map
 Disallow: /src/js/*.map
+Disallow: /src/img/*.map
+
+# Permitir acesso a arquivos de configuração importantes
+Allow: /manifest.json
+Allow: /sitemap.xml
+
+# Diretivas específicas para motores de busca
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1

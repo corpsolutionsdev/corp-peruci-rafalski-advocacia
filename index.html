@@ -86,11 +86,11 @@
                 </a>
             </div>
             <nav class="nav" id="nav">
-                <a href="#sobre" class="nav-link">Sobre</a>
-                <a href="#servicos" class="nav-link">Serviços</a>
-                <a href="#processo" class="nav-link">Processo</a>
-                <a href="#depoimentos" class="nav-link">Depoimentos</a>
-                <a href="#contato" class="nav-link">Contato</a>
+                <a href="#about" class="nav-link">Quem Somos</a>
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#process" class="nav-link">Processo</a>
+                <a href="#testimonials" class="nav-link">Depoimentos</a>
+                <a href="#contact" class="nav-link">Contato</a>
             </nav>
             <button class="hamburger" id="hamburger">
                 <span></span>
@@ -106,25 +106,24 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Seus direitos trabalhistas ou previdenciários estão em risco?
+                    Precisa de um Advogado Trabalhista?
                 </h1>
                 <p class="hero-subtitle">
-                    Lutamos para garantir o que é seu por direito – rápido e sem enrolação.
+                    Seus direitos como trabalhador podem estar sendo desrespeitados.
                 </p>
                 <p class="hero-description">
-                    Atendemos clientes em todo o Brasil com atendimento online ou presencial, com histórico comprovado de vitórias.
+                    Fale agora com um advogado trabalhista e descubra como podemos te ajudar a buscar tudo que é seu por direito.
                 </p>
                 <div class="hero-cta">
-                    <a href="https://api.whatsapp.com/send/?phone=5547999761020&text&type=phone_number&app_absent=0" 
-                       class="btn btn-primary" target="_blank">
+                    <button class="btn btn-primary" id="hero-whatsapp-btn">
                         <i class="fab fa-whatsapp"></i>
                         Falar com Advogado
-                    </a>
-                    <a href="tel:+5547999761020" class="btn btn-secondary">
+                    </button>
+                    <a href="tel:+554736280020" class="btn btn-secondary">
                         <i class="fas fa-phone"></i>
-                        Ligar Agora
+                        (47) 3628-0020
                     </a>
-                </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -140,7 +139,7 @@
                 </div>
                 <div class="badge counter-badge">
                     <i class="fas fa-clock"></i>
-                    <h3 class="counter" data-target="15" data-suffix="+">0+</h3>
+                    <h3 class="counter" data-target="20" data-suffix="+">0+</h3>
                     <p>de Experiência</p>
                 </div>
                 <div class="badge counter-badge">
@@ -158,32 +157,220 @@
     </section>
 
     <!-- Sobre os Advogados -->
-    <section id="sobre" class="about">
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Conheça Nossa Equipe</h2>
+            <h2 class="section-title">Quem Somos</h2>
+            
+            <div class="company-intro">
+                <div class="company-text">
+                    <p>O escritório Peruci, Rafalski &amp; Oracz Advogados conta com a experiência de mais de 20 anos de advocacia de seus profissionais, atuando com excelência nas mais diversas áreas do direito. Prestamos atendimento personalizado e altamente qualificado. Atuamos em todo o território nacional, com escritório localizado na cidade de Canoinhas – SC.</p>
+                </div>
+                <div class="company-photo">
+                    <img src="src/img/team/team.jpg" alt="Equipe do Escritório" loading="lazy">
+                </div>
+            </div>
+            
             <div class="lawyers-grid">
-                <div class="lawyer-card">
+                <div class="lawyer-card" data-lawyer="marlon">
                     <div class="lawyer-photo">
-                        <img src="src/img/peruci.png" alt="Marlon Peruci" loading="lazy">
+                        <img src="src/img/team/marlon.jpg" alt="Marlon Peruci" loading="lazy">
                     </div>
                     <h3>Marlon Peruci</h3>
                     <p class="oab">OAB/SC 15.122 | OAB/PR 81.243</p>
-                    <p class="specialty">Especialista em Direito Trabalhista</p>
+                    <p class="specialty">Especialista em Direito Empresarial</p>
+                    <div class="lawyer-card-overlay">
+                        <span>Clique para mais detalhes</span>
+                    </div>
                 </div>
-                <div class="lawyer-card">
+                <div class="lawyer-card" data-lawyer="eraldo">
                     <div class="lawyer-photo">
-                        <img src="src/img/rafalski.png" alt="Eraldo Tadeu Rafalski" loading="lazy">
+                        <img src="src/img/team/eraldo.jpg" alt="Eraldo Tadeu Rafalski" loading="lazy">
                     </div>
                     <h3>Eraldo Tadeu Rafalski</h3>
                     <p class="oab">OAB/SC 69.690</p>
-                    <p class="specialty">Especialista em Direito Previdenciário</p>
+                    <p class="specialty">Especialista em Direito do Trabalho</p>
+                    <div class="lawyer-card-overlay">
+                        <span>Clique para mais detalhes</span>
+                    </div>
+                </div>
+                <div class="lawyer-card" data-lawyer="bruna">
+                    <div class="lawyer-photo">
+                        <img src="src/img/team/bruna.jpg" alt="Bruna Oracz" loading="lazy">
+                    </div>
+                    <h3>Bruna Oracz</h3>
+                    <p class="oab">OAB/SC 60.346</p>
+                    <p class="specialty">Especialista em Direito Criminal</p>
+                    <div class="lawyer-card-overlay">
+                        <span>Clique para mais detalhes</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Por que Escolher Nosso Escritório -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Por que escolher nosso escritório?</h2>
+            <p class="why-choose-intro">Na hora de buscar seus direitos, ter um escritório experiente e comprometido faz toda a diferença. Veja o que nos torna a melhor escolha para te ajudar:</p>
+            
+            <div class="advantages-carousel">
+                <div class="carousel-container">
+                    <button class="carousel-arrow carousel-prev" id="carousel-prev" aria-label="Slide anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <button class="carousel-arrow carousel-next" id="carousel-next" aria-label="Próximo slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="carousel-slide active" data-slide="0">
+                        <div class="advantage-item">
+                            <div class="advantage-icon">
+                                <i class="fas fa-laptop-house"></i>
+                            </div>
+                            <div class="advantage-content">
+                                <h3>Atendimento 100% online e humanizado</h3>
+                                <p>Você fala diretamente com um advogado, sem enrolação, sem linguagem difícil. Explicamos tudo com clareza.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide" data-slide="1">
+                        <div class="advantage-item">
+                            <div class="advantage-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="advantage-content">
+                                <h3>Mais de 20 anos de experiência em Direito do Trabalho</h3>
+                                <p>Atuamos em casos de demissão, acidente de trabalho, assédio, jornada abusiva, entre outros. Já ajudamos centenas de trabalhadores em situações parecidas com a sua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide" data-slide="2">
+                        <div class="advantage-item">
+                            <div class="advantage-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="advantage-content">
+                                <h3>Agilidade e foco no que realmente importa</h3>
+                                <p>Sabemos que quem procura um advogado está com pressa e precisa de orientação rápida. Nosso processo é direto, objetivo e voltado para resolver o seu problema.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide" data-slide="3">
+                        <div class="advantage-item">
+                            <div class="advantage-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="advantage-content">
+                                <h3>Transparência e compromisso com o cliente</h3>
+                                <p>Você acompanha cada passo do seu caso e recebe orientações personalizadas desde o primeiro contato. Aqui, você é tratado com respeito e seriedade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-navigation">
+                    <button class="carousel-dot active" data-slide="0" aria-label="Ir para slide 1"></button>
+                    <button class="carousel-dot" data-slide="1" aria-label="Ir para slide 2"></button>
+                    <button class="carousel-dot" data-slide="2" aria-label="Ir para slide 3"></button>
+                    <button class="carousel-dot" data-slide="3" aria-label="Ir para slide 4"></button>
+                </div>
+            </div>
+            
+            <div class="why-choose-cta">
+                <button class="btn btn-primary btn-large" id="why-choose-whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    QUERO FALAR COM UM ADVOGADO TRABALHISTA AGORA
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços - Como um Advogado Trabalhista pode te ajudar -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Como um advogado trabalhista pode te ajudar?</h2>
+            <p class="services-intro">Trabalhadores muitas vezes enfrentam abusos aos seus direitos e nem sabem. Veja como um advogado pode atuar ao seu lado:</p>
+            
+            <div class="services-content">
+                <div class="service-main">
+                    <div class="service-header">
+                        <h3>Teve um Acidente de Trabalho? Saiba seus direitos</h3>
+                    </div>
+                    <p class="service-description">Se você sofreu um acidente de trabalho, é importante saber que a empresa e o INSS têm responsabilidades com você. Muitos trabalhadores não recebem tudo que têm direito por falta de orientação. Veja o que pode ser garantido por lei:</p>
+                    
+                    <div class="rights-list">
+                        <div class="right-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Estabilidade no emprego por 12 meses após o retorno do afastamento</span>
+                        </div>
+                        <div class="right-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Recebimento de Auxílio-Acidente: benefício pago pelo INSS se houver sequelas permanentes</span>
+                        </div>
+                        <div class="right-item">
+                            <i class="fas fa-gavel"></i>
+                            <span>Indenização por dano moral ou material, se houver culpa da empresa no acidente</span>
+                        </div>
+                        <div class="right-item">
+                            <i class="fas fa-medkit"></i>
+                            <span>Reembolso de despesas médicas, transporte, medicamentos, fisioterapia, etc.</span>
+                        </div>
+                        <div class="right-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Manutenção do plano de saúde durante o período de afastamento</span>
+                        </div>
+                    </div>
+                    
+                    <p class="service-note">Cada caso é único e merece atenção especializada. Fale com um advogado e descubra como garantir seus direitos após um acidente de trabalho.</p>
+                </div>
+                
+                <div class="service-other-rights">
+                    <h3>Conheça mais dos seus direitos como trabalhador:</h3>
+                    <div class="other-rights-grid">
+                        <div class="other-rights-row">
+                            <div class="other-right-item">
+                                <i class="fas fa-calculator"></i>
+                                <span>Verificar se há verbas rescisórias não pagas: como aviso prévio, férias, 13º salário, FGTS e multa de 40%.</span>
+                            </div>
+                            <div class="other-right-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Cobrar horas extras: incluindo intervalos não concedidos e tempo à disposição do empregador.</span>
+                            </div>
+                            <div class="other-right-item">
+                                <i class="fas fa-undo"></i>
+                                <span>Reverter demissões por justa causa indevidas: muitas empresas aplicam essa penalidade sem justificativa.</span>
+                            </div>
+                        </div>
+                        <div class="other-rights-row">
+                            <div class="other-right-item">
+                                <i class="fas fa-file-contract"></i>
+                                <span>Reconhecer vínculo de emprego: para quem trabalhou sem carteira assinada.</span>
+                            </div>
+                            <div class="other-right-item">
+                                <i class="fas fa-user-shield"></i>
+                                <span>Indenização por assédio ou dano moral: se você foi humilhado, pressionado ou assediado no trabalho.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <button class="btn btn-primary btn-large" id="services-whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    QUERO FALAR COM UM ADVOGADO TRABALHISTA
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Processo em 3 Passos -->
-    <section id="processo" class="process">
+    <section id="process" class="process">
         <div class="container">
             <h2 class="section-title">Como Funciona</h2>
             <div class="process-steps">
@@ -207,7 +394,7 @@
     </section>
 
     <!-- Problema e Solução -->
-    <section id="servicos" class="problem-solution">
+    <section id="problem-solution" class="problem-solution">
         <div class="container">
             <h2 class="section-title">Por que agir rápido é fundamental?</h2>
             <div class="ps-grid">
@@ -266,41 +453,8 @@
         </div>
     </section>
 
-    <!-- Casos de Sucesso -->
-    <section class="success-cases">
-        <div class="container">
-            <h2 class="section-title">Casos de Sucesso</h2>
-            <div class="cases-grid">
-                <div class="case-card">
-                    <div class="case-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Demissão Injusta Revertida</h3>
-                    <p class="case-result">R$ 48.000,00 em indenizações</p>
-                    <p class="case-description">Conseguimos reverter a demissão injusta de João, garantindo o valor integral das verbas rescisórias.</p>
-                </div>
-                <div class="case-card">
-                    <div class="case-icon">
-                        <i class="fas fa-piggy-bank"></i>
-                    </div>
-                    <h3>Revisão de Aposentadoria</h3>
-                    <p class="case-result">Aumento de R$ 2.500,00/mês</p>
-                    <p class="case-description">Ana conseguiu revisar sua aposentadoria, aumentando significativamente seu benefício mensal.</p>
-                </div>
-                <div class="case-card">
-                    <div class="case-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Horas Extras</h3>
-                    <p class="case-result">R$ 35.000,00 em pagamentos</p>
-                    <p class="case-description">Pedro recebeu todas as horas extras não pagas durante 5 anos de trabalho.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Depoimentos -->
-    <section id="depoimentos" class="testimonials">
+    <section id="testimonials" class="testimonials">
         <div class="container">
             <h2 class="section-title">O que nossos clientes dizem</h2>
             <div class="testimonials-grid">
@@ -368,20 +522,165 @@
     </section>
 
     <!-- CTA Final -->
-    <section id="contato" class="final-cta">
+    <section class="final-cta">
         <div class="container">
             <h2>Não deixe seus direitos prescreverem</h2>
             <p>Entre em contato agora e garanta uma análise gratuita do seu caso</p>
             <div class="cta-buttons">
-                <a href="https://api.whatsapp.com/send/?phone=5547999761020&text&type=phone_number&app_absent=0" 
-                   class="btn btn-primary btn-large" target="_blank">
+                <button class="btn btn-primary btn-large" id="cta-whatsapp-btn">
                     <i class="fab fa-whatsapp"></i>
                     Falar no WhatsApp
-                </a>
+                </button>
                 <a href="tel:+5547999761020" class="btn btn-secondary btn-large">
                     <i class="fas fa-phone"></i>
                     Ligar Agora
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perguntas Frequentes -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>1. Fui demitido. Como saber se recebi tudo corretamente?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Você tem direito a verbas como aviso prévio, férias, 13º, saldo de salário, FGTS e multa de 40%. Um advogado pode conferir os valores pagos e identificar se houve erro ou omissão.</p>
+                        <div class="faq-cta">
+                            <button class="btn btn-primary" data-faq-action="demissao">
+                                <i class="fab fa-whatsapp"></i>
+                                FALAR COM UM ADVOGADO AGORA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>2. Trabalhei sem carteira assinada. Tenho algum direito?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Mesmo sem registro, você pode ter direito a FGTS, INSS, férias, 13º e até reconhecimento do vínculo na Justiça.</p>
+                        <div class="faq-cta">
+                            <button class="btn btn-primary" data-faq-action="carteira">
+                                <i class="fab fa-whatsapp"></i>
+                                QUERO SABER MEUS DIREITOS
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>3. Sofri um acidente no trabalho. O que posso exigir e como proceder?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Você pode ter direito a estabilidade no emprego, auxílio-acidente, afastamento remunerado e indenizações por danos.</p>
+                        <div class="faq-cta">
+                            <button class="btn btn-primary" data-faq-action="acidente">
+                                <i class="fab fa-whatsapp"></i>
+                                TIVE UM ACIDENTE E PRECISO DE AJUDA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>4. A empresa me demitiu por justa causa. Isso está correto?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nem toda justa causa é válida. A empresa precisa provar a falta grave. Se for injusta, é possível reverter e garantir seus direitos.</p>
+                        <div class="faq-cta">
+                            <button class="btn btn-primary" data-faq-action="justa-causa">
+                                <i class="fab fa-whatsapp"></i>
+                                FUI DEMITIDO POR JUSTA CAUSA, E AGORA?
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-card">
+                <div class="contact-content">
+                    <div class="contact-column contact-info">
+                        <div class="contact-item contact-phone">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Escritório:</strong> 
+                                <a href="tel:+554736280020">(47) 3628-0020</a>
+                            </div>
+                        </div>
+                        <div class="contact-item contact-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>Dr. Marlon Peruci:</strong> 
+                                <a href="https://api.whatsapp.com/send/?phone=55479999480019" target="_blank" class="social-link">(47) 9 9948-0019</a>
+                            </div>
+                        </div>
+                        <div class="contact-item contact-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>Dr. Eraldo Tadeu Rafalski:</strong> 
+                                <a href="https://api.whatsapp.com/send/?phone=55479999227520" target="_blank" class="social-link">(47) 9 9922-7520</a>
+                            </div>
+                        </div>
+                        <div class="contact-item contact-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>Dra. Bruna Oracz:</strong> 
+                                <a href="https://api.whatsapp.com/send/?phone=55479999930364" target="_blank" class="social-link">(47) 9 9993-0364</a>
+                            </div>
+                        </div>
+                        <div class="contact-item contact-email">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong> 
+                                <a href="mailto:perucirafalskieoracz.adv@gmail.com">perucirafalskieoracz.adv@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item contact-social">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <strong>Instagram:</strong> 
+                                <a href="https://www.instagram.com/perucierafalski.advocacia/" target="_blank" class="social-link">@perucierafalski.advocacia</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-column contact-location">
+                        <div class="contact-item contact-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Escritório:</strong><br>
+                                Rua Pastor George Weger, nº 227<br>
+                                Centro, Canoinhas/SC<br>
+                                CEP 89460-144
+                            </div>
+                        </div>
+                        <div class="contact-item contact-hours">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Atendimento:</strong><br>
+                                Online e Presencial<br>
+                                Todo o Brasil
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -395,32 +694,219 @@
                     <p>Especialistas em Direito Trabalhista e Previdenciário</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p><i class="fas fa-phone"></i> (47) 99976-1020</p>
-                    <p><i class="fas fa-envelope"></i> contato@perucirafalski.com.br</p>
+                    <h3>Áreas de Atuação</h3>
+                    <p>Direito do Trabalho</p>
+                    <p>Direito Previdenciário</p>
+                    <p>Direito Empresarial</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Atendimento</h3>
-                    <p>Online e Presencial</p>
-                    <p>Todo o Brasil</p>
+                    <h3>Localização</h3>
+                    <p>Canoinhas, Santa Catarina</p>
+                    <p>Atendimento em todo o Brasil</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Peruci &amp; Rafalski Advocacia. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Peruci &amp; Rafalski Advocacia. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Flutuante -->
-    <a href="https://api.whatsapp.com/send/?phone=5547999761020&text&type=phone_number&app_absent=0" 
-       class="whatsapp-float" target="_blank">
+    <button class="whatsapp-float" id="whatsapp-float-btn">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </button>
 
     <!-- Botão Scroll to Top -->
     <button class="scroll-to-top" id="scroll-to-top" title="Voltar ao topo">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    <!-- Modais dos Advogados -->
+    <div id="lawyer-modal-marlon" class="lawyer-modal">
+        <div class="lawyer-modal-content">
+            <button class="lawyer-modal-close">&times;</button>
+            <div class="lawyer-modal-header">
+                <div class="lawyer-modal-photo">
+                    <img src="src/img/team/marlon.jpg" alt="Marlon Peruci">
+                </div>
+                <div class="lawyer-modal-info">
+                    <h2>Marlon Peruci</h2>
+                    <p class="lawyer-modal-oab">OAB/SC 15.122 | OAB/PR 81.243</p>
+                    <p class="lawyer-modal-specialty">Especialista em Direito Trabalhista</p>
+                </div>
+            </div>
+            <div class="lawyer-modal-body">
+                <h3>Formação e Experiência</h3>
+                <p>Advogado desde 2001, graduado em Direito pela Universidade Tuiuti do Paraná em 2000. Especialista em Direito Empresarial pela IBEJ Pós-Graduação em 2001.</p>
+                
+                <h3>Áreas de Atuação</h3>
+                <ul>
+                    <li>Direito Empresarial</li>
+                    <li>Direito do Trabalho</li>
+                    <li>Direito Criminal</li>
+                    <li>Processual Penal</li>
+                    <li>Direito Cível</li>
+                </ul>
+                
+                <h3>Atendimento</h3>
+                <p>Atende clientes em todo o Brasil, com consulta gratuita e análise personalizada de cada caso.</p>
+            </div>
+            <div class="lawyer-modal-footer">
+                <a href="https://api.whatsapp.com/send/?phone=55479999480019&text=Olá! Gostaria de falar com o Dr. Marlon Peruci sobre um caso jurídico." 
+                   class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Falar com Dr. Marlon
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="lawyer-modal-eraldo" class="lawyer-modal">
+        <div class="lawyer-modal-content">
+            <button class="lawyer-modal-close">&times;</button>
+            <div class="lawyer-modal-header">
+                <div class="lawyer-modal-photo">
+                    <img src="src/img/team/eraldo.jpg" alt="Eraldo Tadeu Rafalski">
+                </div>
+                <div class="lawyer-modal-info">
+                    <h2>Eraldo Tadeu Rafalski</h2>
+                    <p class="lawyer-modal-oab">OAB/SC 69.690</p>
+                    <p class="lawyer-modal-specialty">Especialista em Direito Previdenciário</p>
+                </div>
+            </div>
+            <div class="lawyer-modal-body">
+                <h3>Formação e Experiência</h3>
+                <p>Advogado desde 2023, graduado em Direito pela Universidade do Contestado de Canoinhas/SC em 2016. Especialista em Direito e Processo do Trabalho e pós-graduando em Direito Processual Penal pela Faculdade Damásio Educacional.</p>
+                
+                <h3>Carreira Militar</h3>
+                <p>Exerceu por 30 anos a função de Bombeiro Militar no CBMSC, atualmente na reserva remunerada como 2º Sargento.</p>
+                
+                <h3>Áreas de Atuação</h3>
+                <ul>
+                    <li>Direito e Processo do Trabalho</li>
+                    <li>Direito Previdenciário</li>
+                    <li>Direito Criminal</li>
+                    <li>Direito Cível</li>
+                    <li>Direito de Família</li>
+                </ul>
+                
+                <h3>Atendimento</h3>
+                <p>Oferece consulta gratuita e análise especializada para todos os casos, com atendimento em todo o Brasil.</p>
+            </div>
+            <div class="lawyer-modal-footer">
+                <a href="https://api.whatsapp.com/send/?phone=55479999227520&text=Olá! Gostaria de falar com o Dr. Eraldo Rafalski sobre um caso jurídico." 
+                   class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Falar com Dr. Eraldo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="lawyer-modal-bruna" class="lawyer-modal">
+        <div class="lawyer-modal-content">
+            <button class="lawyer-modal-close">&times;</button>
+            <div class="lawyer-modal-header">
+                <div class="lawyer-modal-photo">
+                    <img src="src/img/team/bruna.jpg" alt="Bruna Oracz">
+                </div>
+                <div class="lawyer-modal-info">
+                    <h2>Bruna Oracz</h2>
+                    <p class="lawyer-modal-oab">OAB/SC 60.346</p>
+                    <p class="lawyer-modal-specialty">Especialista em Direito Processual Penal</p>
+                </div>
+            </div>
+            <div class="lawyer-modal-body">
+                <h3>Formação e Experiência</h3>
+                <p>Advogada há 5 anos, graduada em Direito pela Universidade do Contestado de Canoinhas/SC desde 2018. Pós-graduanda em Direito Processual Penal pela Faculdade Damásio Educacional.</p>
+                
+                <h3>Áreas de Atuação</h3>
+                <ul>
+                    <li>Direito do Trabalho</li>
+                    <li>Direito Criminal</li>
+                    <li>Direito Cível</li>
+                </ul>
+                
+                <h3>Atendimento</h3>
+                <p>Oferece consulta gratuita e análise especializada para todos os casos, com atendimento em todo o Brasil.</p>
+            </div>
+            <div class="lawyer-modal-footer">
+                <a href="https://api.whatsapp.com/send/?phone=55479999930364&text=Olá! Gostaria de falar com a Dra. Bruna Oracz sobre um caso jurídico." 
+                   class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Falar com Dra. Bruna
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Escolha dos Advogados -->
+    <div id="lawyer-choice-modal" class="lawyer-choice-modal">
+        <div class="lawyer-choice-modal-content">
+            <button class="lawyer-choice-modal-close">&times;</button>
+            <div class="lawyer-choice-modal-header">
+                <h2>Escolha seu Advogado</h2>
+                <p>Selecione o profissional mais adequado para o seu caso</p>
+            </div>
+            <div class="lawyer-choice-modal-body">
+                <div class="lawyer-choice-grid">
+                    <div class="lawyer-choice-card" data-lawyer="marlon">
+                        <div class="lawyer-choice-photo">
+                            <img src="src/img/team/marlon.jpg" alt="Marlon Peruci">
+                        </div>
+                        <div class="lawyer-choice-info">
+                            <h3>Dr. Marlon Peruci</h3>
+                            <p class="lawyer-choice-oab">OAB/SC 15.122 | OAB/PR 81.243</p>
+                            <p class="lawyer-choice-specialty">Especialista em Direito Empresarial</p>
+                            <p class="lawyer-choice-phone">(47) 9 9948-0019</p>
+                        </div>
+
+                        <a href="https://api.whatsapp.com/send/?phone=55479999480019&text=Olá! Gostaria de falar com o Dr. Marlon Peruci sobre um caso jurídico." 
+                           class="lawyer-choice-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="lawyer-choice-card" data-lawyer="eraldo">
+                        <div class="lawyer-choice-photo">
+                            <img src="src/img/team/eraldo.jpg" alt="Eraldo Tadeu Rafalski">
+                        </div>
+                        <div class="lawyer-choice-info">
+                            <h3>Dr. Eraldo Tadeu Rafalski</h3>
+                            <p class="lawyer-choice-oab">OAB/SC 69.690</p>
+                            <p class="lawyer-choice-specialty">Especialista em Direito do Trabalho</p>
+                            <p class="lawyer-choice-phone">(47) 9 9922-7520</p>
+                        </div>
+
+                        <a href="https://api.whatsapp.com/send/?phone=55479999227520&text=Olá! Gostaria de falar com o Dr. Eraldo Rafalski sobre um caso jurídico." 
+                           class="lawyer-choice-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="lawyer-choice-card" data-lawyer="bruna">
+                        <div class="lawyer-choice-photo">
+                            <img src="src/img/team/bruna.jpg" alt="Bruna Oracz">
+                        </div>
+                        <div class="lawyer-choice-info">
+                            <h3>Dra. Bruna Oracz</h3>
+                            <p class="lawyer-choice-oab">OAB/SC 60.346</p>
+                            <p class="lawyer-choice-specialty">Especialista em Direito Criminal</p>
+                            <p class="lawyer-choice-phone">(47) 9 9993-0364</p>
+                        </div>
+
+                        <a href="https://api.whatsapp.com/send/?phone=55479999930364&text=Olá! Gostaria de falar com a Dra. Bruna Oracz sobre um caso jurídico." 
+                           class="lawyer-choice-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="src/js/index.js"></script>
     

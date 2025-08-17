@@ -64,11 +64,32 @@ corp-peruci-rafalski-advocacia/
 │       ├── 📄 background.webp # Imagem de fundo
 │       ├── 📄 logo.png        # Logo da advocacia
 │       ├── 📄 icon.png        # Favicon
-│       ├── 📄 peruci.png      # Foto do Dr. Peruci
-│       └── 📄 rafalski.png    # Foto do Dr. Rafalski
+│       └── 📁 team/           # Fotos da equipe
+│           ├── 📄 marlon.jpg   # Dr. Marlon Peruci
+│           ├── 📄 eraldo.jpg   # Dr. Eraldo Rafalski
+│           ├── 📄 bruna.jpg    # Dra. Bruna Oracz
+│           └── 📄 team.jpg     # Foto da equipe
 │
 └── 📁 docs/                   # Documentação (se aplicável)
 ```
+
+## 🎯 Seções da Landing Page
+
+### Navegação Principal
+- **`#about`** - Quem Somos (Apresentação da equipe)
+- **`#services`** - Serviços (Direitos trabalhistas e previdenciários)
+- **`#process`** - Processo (Como funciona em 3 passos)
+- **`#testimonials`** - Depoimentos (Casos de sucesso)
+- **`#contact`** - Contato (Informações e canais de comunicação)
+- **`#problem-solution`** - Problema e Solução (Por que agir rápido)
+
+### Funcionalidades Especiais
+- **Carrossel de vantagens** responsivo para mobile
+- **Modais dos advogados** com informações detalhadas
+- **Botão WhatsApp flutuante** para contato rápido
+- **Scroll suave** entre seções
+- **Menu mobile** com hamburger
+- **Lazy loading** de imagens
 
 ## 🎨 Características do Design
 
@@ -158,18 +179,6 @@ corp-peruci-rafalski-advocacia/
 - [ ] Analytics avançado
 - [ ] Testes A/B
 - [ ] Otimização de performance
-
-## 🎯 Seções da Landing Page
-
-1. **Header** - Logo e navegação principal
-2. **Hero** - Apresentação e call-to-action principal
-3. **Sobre** - Perfil dos advogados
-4. **Serviços** - Áreas de atuação
-5. **Processo** - Como trabalhamos
-6. **Casos de Sucesso** - Histórico de vitórias
-7. **Depoimentos** - Feedback dos clientes
-8. **Contato** - Formulário e informações
-9. **Footer** - Links e informações adicionais
 
 ## 🔧 Personalização
 
@@ -263,8 +272,8 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 **Peruci & Rafalski Advocacia**
 - **Localização**: Canoinhas-SC, Brasil
 - **Website**: [perucierafalski.adv.br](https://perucierafalski.adv.br)
-- **Email**: [contato@perucierafalski.adv.br](mailto:contato@perucierafalski.adv.br)
-- **WhatsApp**: [Entre em contato](https://wa.me/5547999999999)
+- **Email**: [perucirafalskieoracz.adv@gmail.com](mailto:perucirafalskieoracz.adv@gmail.com)
+- **WhatsApp**: [Dr. Marlon Peruci](https://api.whatsapp.com/send/?phone=55479999480019) | [Dr. Eraldo Rafalski](https://api.whatsapp.com/send/?phone=55479999227520) | [Dra. Bruna Oracz](https://api.whatsapp.com/send/?phone=55479999930364)
 
 ## 🙏 Agradecimentos
 
@@ -277,4 +286,4 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 
 **Desenvolvido com ❤️ para a Peruci & Rafalski Advocacia**
 
-*Última atualização: Janeiro 2024*
+*Última atualização: Janeiro 2025*

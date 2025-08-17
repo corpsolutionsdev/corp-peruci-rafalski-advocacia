@@ -71,17 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Formulário de contato (se existir)
-    const contactForm = document.querySelector('#contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Aqui você pode adicionar a lógica para enviar o formulário
-            alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
-        });
-    }
-    
     // Lazy loading para imagens (opcional)
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -557,11 +546,25 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(e) {
         // ESC para fechar modais
         if (e.key === 'Escape') {
+            // Fechar modais gerais
             const openModals = document.querySelectorAll('.modal[style*="display: flex"]');
             openModals.forEach(modal => {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             });
+            
+            // Fechar modais dos advogados
+            const activeLawyerModal = document.querySelector('.lawyer-modal.active');
+            if (activeLawyerModal) {
+                activeLawyerModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            // Fechar modal de escolha dos advogados
+            if (lawyerChoiceModal && lawyerChoiceModal.classList.contains('active')) {
+                lawyerChoiceModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         }
         
         // Enter para ativar botões focados
@@ -602,6 +605,266 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('resize', debouncedResizeHandler);
     
+    // Funcionalidade dos modais dos advogados
+    const lawyerCards = document.querySelectorAll('.lawyer-card[data-lawyer]');
+    const lawyerModals = document.querySelectorAll('.lawyer-modal');
+    const lawyerModalCloses = document.querySelectorAll('.lawyer-modal-close');
+
+    // Funcionalidade do modal de escolha dos advogados
+    const whatsappFloatBtn = document.getElementById('whatsapp-float-btn');
+    const lawyerChoiceModal = document.getElementById('lawyer-choice-modal');
+    const lawyerChoiceModalClose = document.querySelector('.lawyer-choice-modal-close');
+
+    // Abrir modal ao clicar no card
+    lawyerCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const lawyerId = this.getAttribute('data-lawyer');
+            const modal = document.getElementById(`lawyer-modal-${lawyerId}`);
+            
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Focar no botão de fechar para acessibilidade
+                const closeBtn = modal.querySelector('.lawyer-modal-close');
+                if (closeBtn) {
+                    closeBtn.focus();
+                }
+            }
+        });
+    });
+
+    // Fechar modal ao clicar no botão X
+    lawyerModalCloses.forEach(closeBtn => {
+        closeBtn.addEventListener('click', function() {
+            const modal = this.closest('.lawyer-modal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+
+    // Abrir modal de escolha dos advogados
+    if (whatsappFloatBtn) {
+        whatsappFloatBtn.addEventListener('click', function() {
+            lawyerChoiceModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Botão do hero também abre o modal
+    const heroWhatsappBtn = document.getElementById('hero-whatsapp-btn');
+    if (heroWhatsappBtn) {
+        heroWhatsappBtn.addEventListener('click', function() {
+            lawyerChoiceModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Botão da seção CTA final também abre o modal
+    const ctaWhatsappBtn = document.getElementById('cta-whatsapp-btn');
+    if (ctaWhatsappBtn) {
+        ctaWhatsappBtn.addEventListener('click', function() {
+            lawyerChoiceModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Botão da seção "Por que escolher" também abre o modal
+    const whyChooseWhatsappBtn = document.getElementById('why-choose-whatsapp-btn');
+    if (whyChooseWhatsappBtn) {
+        whyChooseWhatsappBtn.addEventListener('click', function() {
+            lawyerChoiceModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Botão da seção de serviços também abre o modal
+    const servicesWhatsappBtn = document.getElementById('services-whatsapp-btn');
+    if (servicesWhatsappBtn) {
+        servicesWhatsappBtn.addEventListener('click', function() {
+            lawyerChoiceModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Funcionalidade do Carrossel de Vantagens
+    const carouselSlides = document.querySelectorAll('.carousel-slide');
+    const carouselDots = document.querySelectorAll('.carousel-dot');
+    const carouselPrev = document.getElementById('carousel-prev');
+    const carouselNext = document.getElementById('carousel-next');
+    let currentSlide = 0;
+    let autoPlayInterval;
+
+    function showSlide(slideIndex) {
+        // Remove todas as classes dos slides e define estado inicial
+        carouselSlides.forEach((slide, index) => {
+            slide.classList.remove('active', 'prev');
+            if (index === slideIndex) {
+                slide.classList.add('active');
+            } else if (index === (slideIndex === 0 ? carouselSlides.length - 1 : slideIndex - 1)) {
+                slide.classList.add('prev');
+            }
+        });
+        
+        // Remove classe active de todos os dots
+        carouselDots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Adiciona classe active ao dot correspondente
+        carouselDots[slideIndex].classList.add('active');
+        
+        currentSlide = slideIndex;
+        
+        // Atualiza estado dos botões de navegação
+        updateNavigationButtons();
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % carouselSlides.length;
+        showSlide(nextIndex);
+    }
+
+    function prevSlide() {
+        const prevIndex = currentSlide === 0 ? carouselSlides.length - 1 : currentSlide - 1;
+        showSlide(prevIndex);
+    }
+
+    function goToSlide(slideIndex) {
+        showSlide(slideIndex);
+    }
+
+    function updateNavigationButtons() {
+        // Atualiza estado dos botões de navegação
+        if (carouselPrev && carouselNext) {
+            carouselPrev.disabled = false;
+            carouselNext.disabled = false;
+        }
+    }
+
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 4000); // Muda a cada 4 segundos
+    }
+
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+        }
+    }
+
+    // Event listeners para navegação
+    if (carouselPrev) {
+        carouselPrev.addEventListener('click', function() {
+            prevSlide();
+            stopAutoPlay();
+            startAutoPlay(); // Reinicia o autoplay
+        });
+    }
+
+    if (carouselNext) {
+        carouselNext.addEventListener('click', function() {
+            nextSlide();
+            stopAutoPlay();
+            startAutoPlay(); // Reinicia o autoplay
+        });
+    }
+
+    // Event listeners para os dots
+    carouselDots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            goToSlide(index);
+            stopAutoPlay();
+            startAutoPlay(); // Reinicia o autoplay
+        });
+    });
+
+    // Pausa o autoplay quando o usuário interage com o carrossel
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+        carouselContainer.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    // Inicia o autoplay e mostra o primeiro slide
+    if (carouselSlides.length > 0) {
+        showSlide(0); // Garante que o primeiro slide seja exibido
+        startAutoPlay();
+        
+        // Debug: verificar se os elementos estão sendo encontrados
+        console.log('Carrossel inicializado com', carouselSlides.length, 'slides');
+        console.log('Dots encontrados:', carouselDots.length);
+        console.log('Botões de navegação:', carouselPrev, carouselNext);
+    }
+
+    // Funcionalidade do FAQ (acordeão)
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+            
+            // Fechar todos os outros itens
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Alternar o item atual
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // Botões de ação do FAQ
+    const faqButtons = document.querySelectorAll('[data-faq-action]');
+    faqButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const action = this.getAttribute('data-faq-action');
+            
+            // Abrir modal de escolha dos advogados
+            if (lawyerChoiceModal) {
+                lawyerChoiceModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Fechar modal de escolha dos advogados
+    if (lawyerChoiceModalClose) {
+        lawyerChoiceModalClose.addEventListener('click', function() {
+            lawyerChoiceModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Fechar modal de escolha ao clicar fora dele
+    if (lawyerChoiceModal) {
+        lawyerChoiceModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+
+    // Fechar modal ao clicar fora dele
+    lawyerModals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+
+
+
     // Cleanup function para remover event listeners quando necessário
     function cleanup() {
         // Remover event listeners específicos se necessário
