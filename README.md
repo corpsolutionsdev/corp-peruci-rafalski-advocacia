@@ -1,6 +1,6 @@
-## 🏛️ Peruci & Rafalski Advocacia
+## 🏛️ Peruci, Rafalski & Oracz - Advogados
 
-**Especialistas em Direitos Trabalhistas e Previdenciários em Canoinhas-SC**
+**Especialistas em Direitos Trabalhistas, Criminais e da Família em Canoinhas-SC**
 
 ![Website](https://img.shields.io/badge/Website-Live-brightgreen)  
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)  
@@ -10,7 +10,7 @@
 
 ## 📋 Sobre o Projeto
 
-Website institucional da **Peruci & Rafalski Advocacia**, especializada em direitos trabalhistas e previdenciários. O projeto oferece uma landing page moderna, responsiva e otimizada para SEO, com foco na conversão de visitantes em clientes.
+Website institucional da **Peruci, Rafalski & Oracz - Advogados**, especializada em direitos trabalhistas, criminais e da família. O projeto oferece uma landing page moderna, responsiva e otimizada para SEO, com foco na conversão de visitantes em clientes.
 
 ### 🎯 Objetivos
 
@@ -29,6 +29,13 @@ Website institucional da **Peruci & Rafalski Advocacia**, especializada em direi
 *   **JavaScript (ES6+)** - Funcionalidades interativas e responsivas
 *   **Font Awesome 6.4.0** - Ícones vetoriais
 *   **Google Fonts (Inter)** - Tipografia moderna e legível
+
+### Sistema de FAQ
+
+*   **CSS Grid/Flexbox** - Layout responsivo das categorias
+*   **CSS Transitions** - Animações suaves de abertura/fechamento
+*   **JavaScript Event Listeners** - Controle de interação em dois níveis
+*   **CSS Classes** - Sistema de estados ativos para acordeão
 
 ### SEO & Performance
 
@@ -61,18 +68,18 @@ corp-peruci-rafalski-advocacia/
 │
 ├── 📁 src/                    # Código fonte
 │   ├── 📁 css/
-│   │   └── 📄 base.css        # Estilos principais
+│   │   └── 📄 base.css        # Estilos principais (inclui sistema FAQ)
 │   ├── 📁 js/
-│   │   └── 📄 index.js        # Funcionalidades JavaScript
+│   │   └── 📄 index.js        # Funcionalidades JavaScript (inclui acordeão FAQ)
 │   └── 📁 img/
 │       ├── 📄 background.webp # Imagem de fundo
 │       ├── 📄 logo.png        # Logo da advocacia
 │       ├── 📄 icon.png        # Favicon
 │       └── 📁 team/           # Fotos da equipe
-│           ├── 📄 marlon.jpg   # Dr. Marlon Peruci
-│           ├── 📄 eraldo.jpg   # Dr. Eraldo Rafalski
-│           ├── 📄 bruna.jpg    # Dra. Bruna Oracz
-│           └── 📄 team.jpg     # Foto da equipe
+│           ├── 📄 marlon.webp   # Dr. Marlon Peruci
+│           ├── 📄 eraldo.webp   # Dr. Eraldo Rafalski
+│           ├── 📄 bruna.webp    # Dra. Bruna Oracz
+│           └── 📄 team.webp     # Foto da equipe
 │
 └── 📁 docs/                   # Documentação (se aplicável)
 ```
@@ -87,6 +94,8 @@ corp-peruci-rafalski-advocacia/
 *   **Scroll suave** entre seções
 *   **Menu mobile** com hamburger
 *   **Lazy loading** de imagens
+*   **Sistema de FAQ em dois níveis** com acordeão interativo
+*   **Seção de perguntas frequentes** organizada por área do direito
 
 ## 🎨 Características do Design
 
@@ -112,6 +121,8 @@ corp-peruci-rafalski-advocacia/
 *   **Cards informativos** com hover effects
 *   **Formulário de contato** integrado
 *   **Footer** com informações completas
+*   **Sistema de FAQ** com categorias expansíveis
+*   **Seção de perguntas frequentes** organizada por área jurídica
 
 ## 🚀 Como Executar
 
@@ -141,6 +152,28 @@ Use um servidor local:
 
 ## 📱 Funcionalidades
 
+### 🆕 Sistema de FAQ em Dois Níveis
+
+O site implementa um sistema de perguntas frequentes organizado e interativo:
+
+**Nível 1 - Categorias:**
+* **Direito do Trabalho** - 4 perguntas com respostas
+* **Direito Criminal** - 5 perguntas com respostas  
+* **Direito da Família** - 6 perguntas com respostas
+
+**Nível 2 - Perguntas:**
+* Ao clicar na categoria, abre a lista de perguntas
+* Ao clicar na pergunta, abre a resposta específica
+* Sistema de acordeão que fecha outras categorias/perguntas automaticamente
+* Botões de CTA (Call-to-Action) para cada resposta
+
+**Características:**
+* Layout responsivo para todos os dispositivos
+* Animações suaves de abertura/fechamento
+* Ícones rotativos para indicar estado
+* Integração com sistema de WhatsApp
+* Design consistente com o tema do site
+
 ### ✅ Implementadas
 
 *   Design responsivo para mobile, tablet e desktop
@@ -156,6 +189,10 @@ Use um servidor local:
 *   PWA com manifest.json
 *   Sitemap XML
 *   Robots.txt configurado
+*   **Sistema de FAQ interativo** com acordeão em dois níveis
+*   **Seção de perguntas frequentes** organizada por área do direito
+*   **Botões de CTA** para cada pergunta do FAQ
+*   **Layout responsivo** para o sistema de FAQ
 
 ### 🔄 Futuras Implementações
 
@@ -204,6 +241,8 @@ Edite as variáveis CSS em `src/css/base.css`:
 *   **JavaScript modular** e eficiente
 *   **Lazy loading** de recursos
 *   **Fonts otimizadas** com display swap
+*   **Sistema de FAQ otimizado** com transições CSS suaves
+*   **JavaScript eficiente** para acordeão em dois níveis
 
 ### Métricas Alvo
 
@@ -239,6 +278,7 @@ Edite as variáveis CSS em `src/css/base.css`:
 *   **Open Graph** para redes sociais
 *   **Twitter Cards** para compartilhamento
 *   **Schema.org** para rich snippets
+*   **FAQ Schema** para melhor indexação das perguntas frequentes
 
 ### Local SEO
 
@@ -265,9 +305,9 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 *   **Comunidade web** pelas melhores práticas
 *   **Clientes** pela confiança depositada
 
-**Desenvolvido com ❤️ para a Peruci & Rafalski Advocacia**
+**Desenvolvido com ❤️ para a Peruci, Rafalski & Oracz - Advogados**
 
-_Última atualização: Janeiro 2025_
+_Última atualização: Janeiro 2025 - Sistema de FAQ implementado_
 
 ```plaintext
 http://localhost:8000

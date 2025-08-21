@@ -689,6 +689,133 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Botões dos cards de serviços
+    const serviceWhatsappBtns = document.querySelectorAll('.service-whatsapp-btn');
+    serviceWhatsappBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const service = this.getAttribute('data-service');
+            let message = '';
+            let phone = '';
+            
+            // Define a mensagem e telefone baseado no serviço
+            switch(service) {
+                case 'trabalho':
+                    message = 'Olá! Gostaria de falar sobre um caso de Direito do Trabalho.';
+                    phone = '5547999761020'; // Dr. Marlon
+                    break;
+                case 'criminal':
+                    message = 'Olá! Gostaria de falar sobre um caso de Direito Criminal.';
+                    phone = '55479999930364'; // Dra. Bruna
+                    break;
+                case 'familia':
+                    message = 'Olá! Gostaria de falar sobre um caso de Direito da Família.';
+                    phone = '55479999227520'; // Dr. Eraldo
+                    break;
+                default:
+                    message = 'Olá! Gostaria de falar sobre um caso jurídico.';
+                    phone = '5547999761020'; // Dr. Marlon como padrão
+            }
+            
+            // Abre o WhatsApp com a mensagem personalizada
+            const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    });
+
+    // Funcionalidade dos Modais de Serviços
+    const serviceModalBtns = document.querySelectorAll('.service-modal-btn');
+    const serviceModals = document.querySelectorAll('.service-modal');
+    const serviceModalCloses = document.querySelectorAll('.service-modal-close');
+
+    // Abrir modais
+    serviceModalBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            const modal = document.getElementById(`modal-${modalId}`);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Fechar modais
+    serviceModalCloses.forEach(closeBtn => {
+        closeBtn.addEventListener('click', function() {
+            const modal = this.closest('.service-modal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+
+    // Fechar modal ao clicar fora dele
+    serviceModals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+
+    // Fechar modal com tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            serviceModals.forEach(modal => {
+                if (modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    });
+
+    // Botões WhatsApp dos modais
+    const modalAcidenteWhatsapp = document.getElementById('modal-acidente-whatsapp');
+    const modalDireitosWhatsapp = document.getElementById('modal-direitos-whatsapp');
+
+    if (modalAcidenteWhatsapp) {
+        modalAcidenteWhatsapp.addEventListener('click', function() {
+            const message = 'Olá! Gostaria de falar sobre um caso de acidente de trabalho.';
+            const phone = '5547999761020'; // Dr. Marlon
+            const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    }
+
+    if (modalDireitosWhatsapp) {
+        modalDireitosWhatsapp.addEventListener('click', function() {
+            const message = 'Olá! Gostaria de falar sobre meus direitos trabalhistas.';
+            const phone = '5547999761020'; // Dr. Marlon
+            const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    }
+
+    // Botões do modal de Direito Criminal
+    const modalCriminalWhatsapp = document.getElementById('modal-criminal-whatsapp');
+    const modalCriminalUrgente = document.getElementById('modal-criminal-urgente');
+
+    if (modalCriminalWhatsapp) {
+        modalCriminalWhatsapp.addEventListener('click', function() {
+            const message = 'Olá! Gostaria de falar sobre um caso de Direito Criminal.';
+            const phone = '55479999930364'; // Dra. Bruna
+            const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    }
+
+    if (modalCriminalUrgente) {
+        modalCriminalUrgente.addEventListener('click', function() {
+            const message = 'URGENTE! Preciso de atendimento imediato para um caso criminal.';
+            const phone = '55479999930364'; // Dra. Bruna
+            const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    }
+
     // Funcionalidade do Carrossel de Vantagens
     const carouselSlides = document.querySelectorAll('.carousel-slide');
     const carouselDots = document.querySelectorAll('.carousel-dot');
@@ -791,28 +918,50 @@ document.addEventListener('DOMContentLoaded', function() {
     if (carouselSlides.length > 0) {
         showSlide(0); // Garante que o primeiro slide seja exibido
         startAutoPlay();
-        
-        // Debug: verificar se os elementos estão sendo encontrados
-        console.log('Carrossel inicializado com', carouselSlides.length, 'slides');
-        console.log('Dots encontrados:', carouselDots.length);
-        console.log('Botões de navegação:', carouselPrev, carouselNext);
     }
 
-    // Funcionalidade do FAQ (acordeão)
+    // Funcionalidade do FAQ (acordeão em dois níveis)
+    const faqCategories = document.querySelectorAll('.faq-category');
     const faqItems = document.querySelectorAll('.faq-item');
+    
+    // Funcionalidade das categorias (primeiro nível)
+    faqCategories.forEach(category => {
+        const categoryHeader = category.querySelector('.faq-category-header');
+        categoryHeader.addEventListener('click', function() {
+            const isActive = category.classList.contains('active');
+            
+            // Fechar todas as outras categorias
+            faqCategories.forEach(otherCategory => {
+                if (otherCategory !== category) {
+                    otherCategory.classList.remove('active');
+                }
+            });
+            
+            // Alternar a categoria atual
+            if (isActive) {
+                category.classList.remove('active');
+            } else {
+                category.classList.add('active');
+            }
+        });
+    });
+    
+    // Funcionalidade das perguntas (segundo nível)
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         question.addEventListener('click', function() {
             const isActive = item.classList.contains('active');
             
-            // Fechar todos os outros itens
-            faqItems.forEach(otherItem => {
+            // Fechar todas as outras perguntas da mesma categoria
+            const parentCategory = item.closest('.faq-category');
+            const otherItems = parentCategory.querySelectorAll('.faq-item');
+            otherItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
                 }
             });
             
-            // Alternar o item atual
+            // Alternar a pergunta atual
             if (isActive) {
                 item.classList.remove('active');
             } else {
@@ -863,7 +1012,110 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Funcionalidade dos Modais dos Serviços
+    // Função para abrir modal
+    function openServiceModal(serviceType) {
+        const modal = document.getElementById(`service-modal-${serviceType}`);
+        if (modal) {
+            // Fechar outros modais primeiro
+            document.querySelectorAll('.service-modal').forEach(m => {
+                m.classList.remove('active');
+                m.style.display = 'none';
+            });
+            // Abrir o modal atual
+            modal.classList.add('active');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        } 
+    }
+    
+    // Função para fechar modal
+    function closeServiceModal(modal) {
+        if (modal) {
+            modal.classList.remove('active');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+    
+    // Aguardar um pouco para garantir que o DOM esteja carregado
+    setTimeout(() => {
+        const serviceCards = document.querySelectorAll('.service-card');
+        const serviceModals = document.querySelectorAll('.service-modal');
+        const serviceModalCloses = document.querySelectorAll('.service-modal-close');
 
+        // Verificar se os elementos existem antes de adicionar event listeners
+        if (serviceCards.length > 0) {
+            // Abrir modais dos serviços ao clicar nos cards
+            serviceCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const serviceType = this.getAttribute('data-service');
+                    openServiceModal(serviceType);
+                });
+            });
+        } else {
+            console.error('Nenhum service card encontrado!');
+        }
+    }, 100);
+
+    // Fechar modais dos serviços
+    if (serviceModalCloses.length > 0) {
+        serviceModalCloses.forEach(closeBtn => {
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const modal = this.closest('.service-modal');
+                closeServiceModal(modal);
+            });
+        });
+    }
+
+    // Fechar modal ao clicar fora dele
+    if (serviceModals.length > 0) {
+        serviceModals.forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeServiceModal(this);
+                }
+            });
+        });
+    }
+
+    // Fechar modal com tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            serviceModals.forEach(modal => {
+                if (modal.classList.contains('active')) {
+                    closeServiceModal(modal);
+                }
+            });
+        }
+    });
+
+    // Botões WhatsApp dos modais de serviços - Abrem o modal de escolha dos advogados
+    const serviceModalWhatsappBtns = document.querySelectorAll('.service-modal-whatsapp-btn');
+    
+    if (serviceModalWhatsappBtns.length > 0) {
+        serviceModalWhatsappBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const serviceType = this.getAttribute('data-service');
+                
+                // Fechar o modal de serviço atual
+                const currentModal = this.closest('.service-modal');
+                if (currentModal) {
+                    closeServiceModal(currentModal);
+                }
+                
+                // Abrir o modal de escolha dos advogados
+                if (lawyerChoiceModal) {
+                    lawyerChoiceModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+    } 
 
     // Cleanup function para remover event listeners quando necessário
     function cleanup() {
