@@ -705,11 +705,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     break;
                 case 'criminal':
                     message = 'Olá! Gostaria de falar sobre um caso de Direito Criminal.';
-                    phone = '55479999930364'; // Dra. Bruna
+                    phone = '5547999930364'; // Dra. Bruna
                     break;
                 case 'familia':
                     message = 'Olá! Gostaria de falar sobre um caso de Direito da Família.';
-                    phone = '55479999227520'; // Dr. Eraldo
+                    phone = '5547999227520'; // Dr. Eraldo
                     break;
                 default:
                     message = 'Olá! Gostaria de falar sobre um caso jurídico.';
@@ -801,7 +801,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (modalCriminalWhatsapp) {
         modalCriminalWhatsapp.addEventListener('click', function() {
             const message = 'Olá! Gostaria de falar sobre um caso de Direito Criminal.';
-            const phone = '55479999930364'; // Dra. Bruna
+            const phone = '5547999930364'; // Dra. Bruna
             const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         });
@@ -810,7 +810,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (modalCriminalUrgente) {
         modalCriminalUrgente.addEventListener('click', function() {
             const message = 'URGENTE! Preciso de atendimento imediato para um caso criminal.';
-            const phone = '55479999930364'; // Dra. Bruna
+            const phone = '5547999930364'; // Dra. Bruna
             const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         });
