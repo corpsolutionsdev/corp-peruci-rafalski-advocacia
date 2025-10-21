@@ -157,22 +157,25 @@ Use um servidor local:
 O site implementa um sistema de perguntas frequentes organizado e interativo:
 
 **Nível 1 - Categorias:**
-* **Direito do Trabalho** - 4 perguntas com respostas
-* **Direito Criminal** - 5 perguntas com respostas  
-* **Direito da Família** - 6 perguntas com respostas
+
+*   **Direito do Trabalho** - 4 perguntas com respostas
+*   **Direito Criminal** - 5 perguntas com respostas
+*   **Direito da Família** - 6 perguntas com respostas
 
 **Nível 2 - Perguntas:**
-* Ao clicar na categoria, abre a lista de perguntas
-* Ao clicar na pergunta, abre a resposta específica
-* Sistema de acordeão que fecha outras categorias/perguntas automaticamente
-* Botões de CTA (Call-to-Action) para cada resposta
+
+*   Ao clicar na categoria, abre a lista de perguntas
+*   Ao clicar na pergunta, abre a resposta específica
+*   Sistema de acordeão que fecha outras categorias/perguntas automaticamente
+*   Botões de CTA (Call-to-Action) para cada resposta
 
 **Características:**
-* Layout responsivo para todos os dispositivos
-* Animações suaves de abertura/fechamento
-* Ícones rotativos para indicar estado
-* Integração com sistema de WhatsApp
-* Design consistente com o tema do site
+
+*   Layout responsivo para todos os dispositivos
+*   Animações suaves de abertura/fechamento
+*   Ícones rotativos para indicar estado
+*   Integração com sistema de WhatsApp
+*   Design consistente com o tema do site
 
 ### ✅ Implementadas
 
@@ -247,9 +250,9 @@ Edite as variáveis CSS em `src/css/base.css`:
 ### Métricas Alvo
 
 *   **Lighthouse Score**: 90+
-*   **First Contentful Paint**: \< 1.5s
-*   **Largest Contentful Paint**: \< 2.5s
-*   **Cumulative Layout Shift**: \< 0.1
+*   **First Contentful Paint**: &lt; 1.5s
+*   **Largest Contentful Paint**: &lt; 2.5s
+*   **Cumulative Layout Shift**: &lt; 0.1
 
 ## 🌐 Compatibilidade
 
@@ -305,9 +308,14 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 *   **Comunidade web** pelas melhores práticas
 *   **Clientes** pela confiança depositada
 
-**Desenvolvido com ❤️ para a Peruci, Rafalski & Oracz - Advogados**
+## 👨‍💻 Desenvolvimento
 
-_Última atualização: Janeiro 2025 - Sistema de FAQ implementado_
+**Desenvolvido por:**
+
+*   [Corp IT Solutions](https://corpitsolutions.tec.br)
+*   Powered by [VWTech Dev](https://vwtechdev.com.br/)
+
+**Desenvolvido com ❤️ para a Peruci, Rafalski & Oracz - Advogados**
 
 ```plaintext
 http://localhost:8000
