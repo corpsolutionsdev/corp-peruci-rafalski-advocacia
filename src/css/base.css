@@ -176,6 +176,7 @@ body::before {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: var(--text-light);
     overflow: hidden;
     background: var(--section-bg);
@@ -191,6 +192,8 @@ body::before {
     max-width: 800px;
     padding: 2rem 0;
     width: 100%;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -203,6 +206,7 @@ body::before {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -211,6 +215,7 @@ body::before {
     margin-bottom: 1rem;
     color: var(--accent-color);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .hero-description {
@@ -218,6 +223,7 @@ body::before {
     margin-bottom: 2.5rem;
     opacity: 0.95;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .hero-cta {
@@ -226,6 +232,8 @@ body::before {
     flex-wrap: wrap;
     width: 100%;
     max-width: 600px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 /* Botões */
@@ -1706,13 +1714,22 @@ body::before {
     animation: none;
 }
 
+/* Esconder botões flutuantes quando o menu está aberto */
+body.menu-open .whatsapp-float,
+body.menu-open .scroll-to-top {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 /* Scroll to Top Button */
 .scroll-to-top {
     position: fixed;
     bottom: 7rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
+    right: 40px;
+    width: 45px;
+    height: 45px;
     background: var(--accent-color);
     color: white;
     border: none;
@@ -1878,9 +1895,9 @@ body::before {
     
     .scroll-to-top {
         bottom: 5rem;
-        right: 1rem;
-        width: 50px;
-        height: 50px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
         font-size: 1rem;
     }
     
@@ -2089,8 +2106,8 @@ body::before {
     
     .scroll-to-top {
         bottom: 4.5rem;
-        right: 0.75rem;
-        width: 45px;
+        right: 0.75rem; 
+        width: 45px;    
         height: 45px;
         font-size: 0.9rem;
     }

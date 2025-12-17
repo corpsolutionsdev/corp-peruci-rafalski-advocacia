@@ -1,5 +1,11 @@
 // Funcionalidades básicas da landing page
 document.addEventListener('DOMContentLoaded', function() {
+    // Atualizar ano do copyright dinamicamente
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+    
     // Menu mobile
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav');
@@ -8,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             nav.classList.toggle('active');
+            // Adicionar/remover classe no body para esconder botões flutuantes
+            if (nav.classList.contains('active')) {
+                document.body.classList.add('menu-open');
+            } else {
+                document.body.classList.remove('menu-open');
+            }
         });
         
         // Fechar menu ao clicar em um link
@@ -16,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 nav.classList.remove('active');
+                document.body.classList.remove('menu-open');
             });
         });
     }
